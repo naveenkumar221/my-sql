@@ -82,29 +82,3 @@ select deptno,loc from dept where loc is null;
 
 -- Find employees whose job starts with ‘M’.
 select ename,job from emp where job like 'm%';
-
-
-
-
-
-
-
-
-
-
-
--- Show employees whose names are exactly 5 characters long.
--- List employees whose job ends with 'MAN'.
--- List employees whose name ends with 's'.
--- Find all employees whose name contains 'AA's.
--- Display employees whose name starts with 'S' and ends with 'H'.
--- List all employees and show a bonus of 15% on their salary.
--- Display employee salary in INR assuming 1 USD = 83 INR.(given in USD)
--- Show commission-to-salary ratio of all salesmen.
--- Show employee name with their monthly and yearly salaries.
--- Find employees whose salary is more than 1500 and who were hired in 1981.
--- Show employees whose job is not 'CLERK' and whose salary is greater than 2000.
--- List employees who have commission but earn less than 2000 salary.
--- Find employees hired after 1981
--- List employees whose department is 10 ,20.
-
