@@ -82,3 +82,46 @@ select deptno,loc from dept where loc is null;
 
 -- Find employees whose job starts with ‘M’.
 select ename,job from emp where job like 'm%';
+
+-- Show employees whose names are exactly 5 characters long.
+select ename from emp where length(ename)=5;
+
+-- List employees whose job ends with 'MAN'.
+select ename,job from emp where job like '%man';
+
+-- List employees whose name ends with 's'.
+select ename,job from emp where ename like '%s';
+
+-- Find all employees whose name contains 'AA's.
+select ename, job from emp where ename like '%AA%';
+
+-- Display employees whose name starts with 'S' and ends with 'H'.
+select ename,job from emp where ename like 's%h';
+
+-- List all employees and show a bonus of 15% on their salary.
+select ename,sal, sal*0.15 as bonus from emp;
+
+-- Display employee salary in INR assuming 1 USD = 83 INR.(given in USD)
+select ename,sal, sal*83 as sal_in_inr from emp;
+
+-- Show commission-to-salary ratio of all salesmen.
+select ename, comm/sal as comm_sal_ratio from emp where job = 'salesman';
+
+-- Show employee name with their monthly and yearly salaries.
+select ename, sal as month_sal, sal*12 as yearly_sal from emp;
+
+-- Find employees whose salary is more than 1500 and who were hired in 1981.
+select ename,sal,hiredate from emp where sal>1500 and  year(hiredate) = '1981';
+
+-- Show employees whose job is not 'CLERK' and whose salary is greater than 2000.
+select ename,job,sal from emp where job<>'clerk' and sal>2000;
+
+-- List employees who have commission but earn less than 2000 salary.
+select ename, sal, comm from emp where comm is not null and sal < 2000;
+
+-- Find employees hired after 1981
+select ename,hiredate,job,sal  from emp where year(hiredate)>1981;
+
+-- List employees whose department is 10 ,20.
+select ename,deptno,job,sal from emp where deptno in (10,20);
+
